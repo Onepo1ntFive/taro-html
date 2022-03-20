@@ -1,0 +1,155 @@
+.detail-course {
+    width: 100%;
+    margin: 0 auto 5rem;
+    max-width: 146rem;
+
+    &__top {
+        max-width: 47rem;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        @media (min-width: $breakpoint-desktop) {
+            max-width: none;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            width: calc(50% - 15rem);
+        }
+    }
+
+    &__pic {
+        padding-bottom: 3rem;
+        order: 2;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 6rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 5rem;
+            order: 1;
+        }
+
+        img {
+            border-radius: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    &__about {
+        padding-bottom: 3rem;
+        order: 1;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 6rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 0;
+            order: 2;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            word-break: break-word;
+
+            @media (min-width: $breakpoint-desktop) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__buy {
+        a {
+            max-width: none;
+
+            @media (min-width: $breakpoint-desktop) {
+                max-width: 35rem;
+            }
+        }
+    }
+
+    &__cost {
+        padding-bottom: 2rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 3.5rem;
+            font-size: 3rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            width: 50%;
+        }
+
+        p {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .h3 {
+            @media (min-width: $breakpoint-tablet) {
+                font-size: 3rem;
+            }
+        }
+
+        p + h2,
+        p + h3 {
+            padding-top: 1em;
+        }
+
+        blockquote {
+            padding-top: 3rem;
+            font-style: italic;
+
+            &::before {
+                margin-bottom: 1rem;
+                content: '';
+                display: block;
+                height: 4rem;
+                background: url('../img/quote.svg') 0 50% no-repeat;
+            }
+        }
+    }
+
+    &__btn {
+        padding-bottom: 3rem;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__catalog {
+        border-top: 1px solid $color-gold-30p;
+        margin-top: 3rem;
+        padding-top: 3rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 6rem;
+            padding-top: 6rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 10rem;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+}

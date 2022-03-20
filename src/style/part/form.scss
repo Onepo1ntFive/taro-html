@@ -1,0 +1,44 @@
+.form {
+    h2 {
+        text-align: center;
+    }
+    &__form {
+        margin: auto;
+        max-width: 53rem;
+    }
+    &__line {
+        padding-bottom: 2rem;
+
+        label {
+            display: block;
+            color: $color-gold;
+            padding-bottom: 1rem;
+        }
+        input,
+        select,
+        textarea {
+            padding: 1rem 1.5rem;
+            border: 1px solid $color-gold;
+            border-radius: 0.4rem;
+            width: 100%;
+            font-size: 1.6rem;
+            font-family: $font-family;
+            color: $color-black;
+        }
+        textarea {
+            resize: vertical;
+            height: 15.5rem;
+        }
+    }
+}
+
+.iti {
+    width: 100%;
+    &__flag {
+        background-image: url('../img/flags.png');
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url('../img/flags@2x.png');
+        }
+    }
+}

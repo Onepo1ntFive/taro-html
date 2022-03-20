@@ -1,0 +1,38 @@
+.pagination {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+    span {
+        color: $color-gold;
+    }
+    a {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &.active {
+            color: $color-black;
+        }
+        &.pagination__prev,
+        &.pagination__next {
+            width: 3.5rem;
+            height: 1.2rem;
+            background: url('../img/arrow-right.svg') 50% 50% no-repeat;
+            transition: background 0.2s ease-in-out;
+            
+            &:hover {
+                background: url('../img/arrow-right-b.svg') 50% 50% no-repeat;
+            }
+        }
+        &.pagination__prev {
+            margin-right: 2rem;
+            transform: rotate(-180deg);
+        }
+        &.pagination__next {
+            margin-left: 2rem;
+        }
+    }
+}
