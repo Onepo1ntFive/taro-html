@@ -1,5 +1,9 @@
 .detail-article {
+    margin: auto;
+    max-width: 146rem;
+    width: 100%;
     position: relative;
+
     &__inner {
         margin: auto;
         width: 100%;
@@ -35,7 +39,7 @@
 
     &__btns {
         padding-bottom: 3rem;
-        
+
         @media (min-width: $breakpoint-tablet) {
             display: flex;
             flex-flow: row wrap;
