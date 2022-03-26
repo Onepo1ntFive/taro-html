@@ -24,4 +24,26 @@
             padding-bottom: 0;
         }
     }
+
+    &__social {
+        padding-bottom: 2rem;
+        text-align: center;
+
+        a {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            img {
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            &:hover img {
+                opacity: 0.75;
+            }
+        }
+    }
 }

@@ -13,7 +13,8 @@
     opacity: 0;
     display: flex;
     flex-flow: column nowrap;
-    background-color: $color-white;
+    justify-content: space-between;
+    background-color: #fffefc;
     transform: scale(0.8);
     transition-property: top, opacity, transform;
     transition-duration: 0.3s;
@@ -32,9 +33,14 @@
     // }`
 
     &__top {
-        padding-top: 5rem;
-        padding-bottom: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
         text-align: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
     &__close {
         padding-bottom: 5rem;
@@ -88,18 +94,11 @@
         justify-content: space-between;
     }
     &__logo {
-        position: relative;
-        opacity: 0;
-        left: -2rem;
-        pointer-events: none;
-        transition-property: opacity, left;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in-out;
+        width: 22rem;
+        max-width: calc(100% - 10rem);
 
-        &.active {
-            pointer-events: all;
-            opacity: 1;
-            left: 0;
+        img {
+            max-width: 100%;
         }
     }
     &__back-btn {
@@ -129,6 +128,29 @@
     &__inner {
         // overflow-x: hidden;
         // overflow-y: auto;
+    }
+
+    &__social {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        text-align: center;
+
+        a {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            img {
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            &:hover img {
+                opacity: 0.75;
+            }
+        }
     }
 
     &--filter {
@@ -183,9 +205,6 @@
 }
 // menu
 .sidebar__menu {
-    margin: 0 auto 10rem;
-    max-width: 30rem;
-    padding-left: 4rem;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -225,6 +244,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+            justify-content: center;
         }
         ins {
             width: 3rem;
