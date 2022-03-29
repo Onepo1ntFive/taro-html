@@ -11182,7 +11182,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     var initMainSwiper = function initMainSwiper() {
       windowWidth = window.innerWidth;
 
-      if (windowWidth < 1440 && swiperMain !== undefined) {
+      if (windowWidth < 1601 && swiperMain !== undefined) {
         var styleElements = document.querySelectorAll('.swiper-main [style]');
         styleElements.forEach(function (styleElement) {
           styleElement.removeAttribute('style');
@@ -11190,7 +11190,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         console.log();
         swiperMain.destroy(true, false);
         swiperMain = undefined;
-      } else if (windowWidth >= 1440 && swiperMain === undefined) {
+      } else if (windowWidth >= 1601 && swiperMain === undefined) {
         swiperMain = new Swiper('.swiper-main', {
           direction: 'vertical',
           mousewheel: true,
@@ -11198,7 +11198,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           parallax: true,
           slidesPerView: 1,
           allowTouchMove: false,
-          hashNavigation: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true
