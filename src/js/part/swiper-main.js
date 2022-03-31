@@ -6,7 +6,7 @@
         function initMainSwiper() {
             windowWidth = window.innerWidth;
 
-            if (windowWidth < 1601 && swiperMain !== undefined) {
+            if (windowWidth < 1200 && swiperMain !== undefined) {
                 let styleElements = document.querySelectorAll('.swiper-main [style]');
                 styleElements.forEach(styleElement => {
                     styleElement.removeAttribute('style');
@@ -15,7 +15,7 @@
                 swiperMain.destroy(true, false);
                 swiperMain = undefined;
 
-            } else if (windowWidth >= 1601 && swiperMain === undefined) {
+            } else if (windowWidth >= 1200 && swiperMain === undefined) {
                 swiperMain = new Swiper('.swiper-main', {
                     direction: 'vertical',
                     mousewheel: true,

@@ -8,6 +8,9 @@
     justify-content: space-between;
 
     @media (min-width: $breakpoint-desktop) {
+        height: 8rem;
+    }
+    @media (min-width: $breakpoint-desktop-super) {
         height: 17rem;
     }
 

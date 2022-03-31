@@ -116,6 +116,15 @@
             flex-flow: column nowrap;
             width: 100%;
 
+            @media (min-width: $breakpoint-desktop) {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            @media (min-width: $breakpoint-desktop-super) {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
             &:nth-child(3n + 1) {
                 grid-area: 1 / 1 / 3 / 2;
             }
@@ -213,6 +222,12 @@
             font-size: 2.4rem;
 
             @media (min-width: $breakpoint-tablet) {
+                font-size: 4rem;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                font-size: 3rem;
+            }
+            @media (min-width: $breakpoint-desktop-super) {
                 font-size: 4rem;
             }
         }

@@ -27,6 +27,10 @@
         }
         textarea {
             resize: vertical;
+            height: 7rem;
+        }
+        
+        @media (min-width: $breakpoint-desktop-super) {
             height: 15.5rem;
         }
     }

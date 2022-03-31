@@ -3,12 +3,16 @@
     max-height: none;
     overflow: visible;
 
-    @media (max-width: calc(#{$breakpoint-desktop-super} - 1px)) {
+    @media (max-width: calc(#{$breakpoint-desktop} - 1px)) {
         &.swiper-pointer-events.swiper-vertical {
             touch-action: auto;
         }
     }
-
+    @media (min-width: $breakpoint-desktop) {
+        height: 100%;
+        max-height: calc(100vh - 8rem - 8rem);
+        overflow: visible;
+    }
     @media (min-width: $breakpoint-desktop-super) {
         height: 100%;
         max-height: calc(100vh - 17rem - 15rem);
@@ -18,7 +22,7 @@
     & > .swiper-wrapper {
         display: block;
 
-        @media (min-width: $breakpoint-desktop-super) {
+        @media (min-width: $breakpoint-desktop) {
             display: flex;
         }
 
@@ -41,11 +45,17 @@
                 margin-bottom: 0;
             }
 
-            @media (min-width: $breakpoint-desktop-super) {
+            @media (min-width: $breakpoint-desktop) {
+                padding-left: 12rem;
+                padding-right: 5rem;
                 border-bottom: 0;
                 margin-bottom: 0;
                 padding-bottom: 0;
                 pointer-events: none;
+            }
+            @media (min-width: $breakpoint-desktop-super) {
+                padding-left: 0;
+                padding-right: 0;
             }
 
             &-active {
@@ -56,7 +66,7 @@
     & > .swiper-pagination {
         display: none;
 
-        @media (min-width: $breakpoint-desktop-super) {
+        @media (min-width: $breakpoint-desktop) {
             display: block;
         }
     }
@@ -91,8 +101,13 @@
         border: 1px solid $color-gold;
         transition: opacity 0.2s ease-in-out;
 
-        @media (min-width: $breakpoint-desktop-super) {
+        
+        @media (min-width: $breakpoint-desktop) {
+            right: 1.5rem;
             display: block;
+        }
+        @media (min-width: $breakpoint-desktop-super) {
+            right: 3.5rem;
         }
 
         &::after {
@@ -124,6 +139,14 @@
     }
     & > .swiper-button-next {
         bottom: 3rem;
+        z-index: 50;
+        
+        @media (min-width: $breakpoint-desktop) {
+            bottom: 8rem;
+        }
+        @media (min-width: $breakpoint-desktop-super) {
+            bottom: 3rem;
+        }
 
         &::after {
             margin-left: 0.1rem;
@@ -167,7 +190,7 @@
         display: block;
         left: -10rem;
     }
-    @media (min-width: $breakpoint-desktop-super) {
+    @media (min-width: $breakpoint-desktop) {
         left: 0;
     }
 
@@ -182,7 +205,7 @@
         width: 30rem;
         text-align: center;
 
-        @media (min-width: $breakpoint-desktop-super) {
+        @media (min-width: $breakpoint-desktop) {
             left: -155%;
         }
 
@@ -211,7 +234,7 @@
         padding-left: 2.5rem;
         font-size: 4rem;
 
-        @media (min-width: $breakpoint-desktop-super) {
+        @media (min-width: $breakpoint-desktop) {
             font-size: 6rem;
         }
     }

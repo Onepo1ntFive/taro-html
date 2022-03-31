@@ -47,6 +47,9 @@ h1,
     color: $color-gold;
 
     @media (min-width: $breakpoint-tablet) {
+        font-size: 4rem;
+    }
+    @media (min-width: $breakpoint-desktop-super) {
         font-size: 7rem;
     }
 }
@@ -75,6 +78,9 @@ h3,
     color: $color-black;
 
     @media (min-width: $breakpoint-tablet) {
+        font-size: 3rem;
+    }
+    @media (min-width: $breakpoint-desktop-extra) {
         font-size: 4rem;
     }
 }
